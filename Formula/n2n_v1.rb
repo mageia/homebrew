@@ -1,4 +1,4 @@
-class N2n_v1 < Formula
+class N2nV1 < Formula
   desc ""
   homepage ""
   url "https://github.com/mageia/n2n_v1/archive/v1.3.2.tar.gz"
