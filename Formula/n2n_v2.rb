@@ -11,7 +11,7 @@ class N2nV2 < Formula
       system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
       # system "cmake", "-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl", ".."
       system "make"
-      # system "make", "install"
+      system "make", "install"
     end
   end
 
