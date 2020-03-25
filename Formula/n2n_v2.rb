@@ -1,14 +1,10 @@
 class N2nV2 < Formula
   desc ""
   homepage "https://github.com/mageia/n2n"
+  url "https://github.com/mageia/n2n", :using => :git, :tag => "2.6-stable"
 
   depends_on "cmake" => :build
   depends_on "openssl" => :build
-
-
-  head do
-    url "https://github.com/mageia/n2n", :using => :git, :tag => "2.6-stable"
-  end
 
   def install
     mkdir "build" do
