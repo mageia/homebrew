@@ -1,16 +1,21 @@
 class N2nV2 < Formula
   desc ""
-  homepage ""
-  url "https://github.com/mageia/n2n", :using => :git, :tag => "2.6-stable"
+  homepage "https://github.com/mageia/n2n"
 
   depends_on "cmake" => :build
   depends_on "openssl" => :build
 
+
+  head do
+    url "https://github.com/mageia/n2n", :using => :git, :tag => "2.6-stable"
+  end
+
   def install
-    system "mkdir", "build"
-    system "cd", "build"
-    system "cmake", "-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl", ".."
-    system "make"
+    mkdir "build" do
+      system "cmake", "-G", "Unix Makefiles", "..", *std_cmake_args
+      # system "cmake", "-DOPENSSL_ROOT_DIR=/usr/local/opt/openssl", ".."
+      system "make"
+      # system "make", "install"
   end
 
   test do
