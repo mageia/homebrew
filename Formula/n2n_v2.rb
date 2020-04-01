@@ -1,7 +1,7 @@
 class N2nV2 < Formula
   desc ""
-  homepage "https://github.com/mageia/n2n"
-  url "https://github.com/mageia/n2n", :using => :git, :tag => "2.6-stable"
+  homepage "https://github.com/mageia/n2n_v2"
+  url "https://github.com/mageia/n2n", :using => :git, :tag => "master"
 
   depends_on "cmake" => :build
   depends_on "openssl" => :build
